@@ -1,0 +1,34 @@
+.title {
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height */
+    color: #000000;
+}
+.subtitle {
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 138.5%;
+    /* or 14px */
+    color: #000000;
+    margin-top: 10px;
+
+}
+.title > span {
+    font-weight: bold;
+}
+.subtitle > span {
+    font-weight: bold;
+}
+.caption {
+    width: 100%;
+    max-width: 312px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+
+}
