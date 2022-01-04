@@ -1,0 +1,49 @@
+.signUpImg {
+  display: flex;
+  justify-content: center;
+  margin-top: 61px;
+}
+.title {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  text-align: center;
+  margin-top: 48px;
+}
+.subtitle {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #6b6b6b;
+  margin-top: 10px;
+}
+.title > span {
+  font-weight: bold;
+}
+.subtitle > span {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 28px;
+}
+.inputWrappers {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 49px;
+}
+.inputWrappers > *:not(:last-child) {
+  margin-bottom: 27px;
+}

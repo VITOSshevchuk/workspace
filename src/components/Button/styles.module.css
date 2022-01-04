@@ -1,0 +1,28 @@
+.button {
+    width: 160px;
+    height: 38px;
+    left: 132px;
+    top: 84px;
+    border-radius: 9px;
+    box-shadow: none;
+    background: #fff;
+    border: 1px solid #000000;
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+    cursor: pointer;
+    transition: all .3s;
+}
+.button:hover {
+    background: #616161;
+    color: #ffffff;
+    border-color:#616161;
+}
+.button:active {
+    background: #BABABA;
+    color: #ffffff;
+    border-color:#BABABA;
+}
