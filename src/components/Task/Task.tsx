@@ -5,10 +5,10 @@ import { Button } from "../Button/Button";
 import { useState } from "react";
 import axios from "axios";
 
-export const Task = () => {
-  const [description, setDescription] = useState();
-  const [title, setTitle] = useState();
-  const [edit, setEdit] = useState();
+export const Task = (props: any) => {
+  const [description, setDescription] = useState<string>("");
+  const [title, setTitle] = useState<string>("");
+  const [edit, setEdit] = useState<boolean>(false);
 
   if (!edit) {
     return (
@@ -16,6 +16,7 @@ export const Task = () => {
         <Plus
           onClick={(event) => {
             setEdit(true);
+            props.onEditOpen();
           }}
         />
         <div className={styles.task}>Add task</div>
@@ -60,10 +61,16 @@ export const Task = () => {
             {/*axios.post(url[, data[, config]])*/}
           </div>
           <div>
-            <button className={styles.cancel} onClick={(event) => {
-              setEdit(false)
-            }}>Cancel</button>
+            <button
+              className={styles.cancel}
+              onClick={(event) => {
+                setEdit(false);
+                props.onEditClose()
+              }}
 
+            >
+              Cancel
+            </button>
           </div>
         </div>
       </div>

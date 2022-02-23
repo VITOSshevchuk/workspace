@@ -1,13 +1,15 @@
 import styles from "./styles.module.css";
 import { Header } from "../../components/Header/Header";
 import { ReactComponent as Cube } from "../../img/cube.svg";
-import {Task} from "../../components/Task/Task";
+import { Task } from "../../components/Task/Task";
+import { useState } from "react";
 
 export const DashboardPage = () => {
+  const [edit, setEdit] = useState<boolean>(false);
   return (
     <div>
       <div>
-        <Header/>
+        <Header />
       </div>
       <div className={styles.wrapper}>
         <div className={styles.title}>Welcome to your Workspace.</div>
@@ -16,15 +18,25 @@ export const DashboardPage = () => {
           Thanks for using <span>Workspace</span>
         </div>
         <div className={styles.container}>
-          <Task/>
+          <Task
+            onEditOpen={() => {
+              setEdit(true);
+            }}
+            onEditClose={() => {
+              setEdit(false)
+            }}
+          />
         </div>
       </div>
-      <div className={styles.content}>
-        <div>
-          <Cube />
+
+      {!edit && (
+        <div className={styles.content}>
+          <div>
+            <Cube />
+          </div>
+          <div className={styles.text}>You don’t have any tasks yet</div>
         </div>
-        <div className={styles.text}>You don’t have any tasks yet</div>
-      </div>
+      )}
     </div>
   );
 };

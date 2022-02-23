@@ -1,28 +1,23 @@
 .button {
-    width: 160px;
-    height: 38px;
-    left: 132px;
-    top: 84px;
-    border-radius: 9px;
-    box-shadow: none;
-    background: #fff;
-    border: 1px solid #000000;
+    padding: 9px 35px;
     font-family: Comfortaa;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
-    line-height: 16px;
-    color: #000000;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    background: #2E2E2E;
+    border-radius: 4px;
+    box-shadow: none;
+    border: none;
     cursor: pointer;
-    transition: all .3s;
 }
 .button:hover {
-    background: #616161;
-    color: #ffffff;
-    border-color:#616161;
+
 }
 .button:active {
-    background: #BABABA;
-    color: #ffffff;
-    border-color:#BABABA;
+
 }

@@ -1,6 +1,7 @@
 import styles from "./styles.module.css";
 import classNames from "classnames";
-export const Input = (props) => {
+
+export const Input = (props: any) => {
   const inputClasses = classNames({
     [styles.input]: true,
     [styles.textarea]: props.isTextarea,
@@ -10,20 +11,12 @@ export const Input = (props) => {
       <div className={styles.label}>{props.label}</div>
 
       {props.isTextarea ? (
-        <textarea
-          onChange={function (event) {
-            props.onChange(event.target.value);
-          }}
-          placeholder={props.placeholder}
-          className={inputClasses}
-        />
+        <textarea placeholder={props.placeholder} className={inputClasses} />
       ) : (
-        <input
-          placeholder={props.placeholder}
-          className={inputClasses}
-          onChange={function (event) {
-            props.onChange(event.target.value);
-          }}
+        <input placeholder={props.placeholder} className={inputClasses}
+        onChange={(event) => {
+          props.hyu(event.target.value)
+        }}
         />
       )}
       {props.error && <div className={styles.error}>{props.error}</div>}
