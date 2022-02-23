@@ -5,12 +5,12 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import axios from "axios";
 
-axios.interceptors.request.use(function (config) {
-  const token = localStorage.getItem("token");
-  config.headers.Authorization = "Bearer " + token;
-
-  return config;
-});
+// axios.interceptors.request.use(function (config) {
+//   const token = localStorage.getItem("token");
+//   config.headers.Authorization = "Bearer " + token;
+//
+//   return config;
+// });
 ReactDOM.render(
   <React.StrictMode>
     <App />

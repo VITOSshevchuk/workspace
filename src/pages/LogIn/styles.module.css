@@ -1,8 +1,14 @@
 .logInImg {
-    display: flex;
-    justify-content: center;
-    margin-top: 61px;
+    margin: 61px auto 33px;
+    width: 172px;
+    height: 167px;
 }
+
+.logInImg > svg {
+    width: 100%;
+    max-height: 100%;
+}
+
 .title {
     font-family: Comfortaa;
     font-style: normal;
@@ -11,7 +17,7 @@
     line-height: 20px;
     color: #000000;
     text-align: center;
-    margin-top: 48px;
+
 }
 .title > span {
     font-weight: bold;
@@ -44,7 +50,20 @@
     align-items: center;
     flex-direction: column;
     margin-bottom: 49px;
+
 }
 .inputWrappers > *:not(:last-child) {
-    margin-bottom: 27px;
+    margin-bottom: 21px;
+}
+
+.frame {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    width: 378px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 43px 42px  22px;
+    box-sizing: border-box;
+
 }
